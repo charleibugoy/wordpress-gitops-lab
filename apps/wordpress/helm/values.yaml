@@ -28,6 +28,6 @@ env:
   WORDPRESS_DB_USER: admin
   WORDPRESS_DB_PASSWORD: password123
   WORDPRESS_DB_NAME: wordpress
-
+  WORDPRESS_DB_PASSWORD_FROM_SECRET: true
 persistence:
   enabled: false

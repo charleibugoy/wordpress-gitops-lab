@@ -1,0 +1,15 @@
+Resources:
+  CDN:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Origins:
+          - DomainName: your-alb.amazonaws.com
+            Id: wordpress-origin
+            CustomOriginConfig:
+              OriginProtocolPolicy: http-only
+
+        DefaultCacheBehavior:
+          TargetOriginId: wordpress-origin
+          ViewerProtocolPolicy: redirect-to-https
