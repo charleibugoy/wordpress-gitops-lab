@@ -1,0 +1,9 @@
+Resources:
+  EKSCluster:
+    Type: AWS::EKS::Cluster
+    Properties:
+      Name: wordpress-cluster
+      RoleArn: <EKS_ROLE_ARN>
+      ResourcesVpcConfig:
+        SubnetIds:
+          - <SUBNET_ID>

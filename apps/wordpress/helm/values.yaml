@@ -1,0 +1,33 @@
+replicaCount: 3
+
+image:
+  repository: wordpress
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+resources:
+  requests:
+    cpu: "200m"
+    memory: "256Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
+
+env:
+  WORDPRESS_DB_HOST: your-rds-endpoint
+  WORDPRESS_DB_USER: admin
+  WORDPRESS_DB_PASSWORD: password123
+  WORDPRESS_DB_NAME: wordpress
+
+persistence:
+  enabled: false

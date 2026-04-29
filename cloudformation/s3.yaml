@@ -1,0 +1,3 @@
+Resources:
+  MediaBucket:
+    Type: AWS::S3::Bucket

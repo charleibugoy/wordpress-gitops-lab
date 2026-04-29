@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+data:
+  scrape.yml: |
+    scrape_configs:
+      - job_name: kubernetes

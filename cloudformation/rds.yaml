@@ -1,0 +1,9 @@
+Resources:
+  MyDB:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceClass: db.t3.micro
+      Engine: mysql
+      MasterUsername: admin
+      MasterUserPassword: password123
+      AllocatedStorage: 20
