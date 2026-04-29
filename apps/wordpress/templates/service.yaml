@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: wordpress
 spec:
-  type: {{ .Values.service.type }}
+  type: LoadBalancer
   selector:
     app: wordpress
   ports:
