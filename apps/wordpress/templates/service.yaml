@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: wordpress
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: wordpress
   ports:
